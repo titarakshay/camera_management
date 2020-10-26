@@ -33,7 +33,7 @@ export default function HeroSection(props) {
               <p className="search-p">Search</p>
               <div className="d-flex block">
                 <input
-                  className="my-1 input"
+                  className="input"
                   type="text"
                   name="tags"
                   placeholder=" search by device id"

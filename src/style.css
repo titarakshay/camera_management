@@ -211,7 +211,7 @@ table {
 
 .filterTags-wrap {
   border: 1px solid #cccccc;
-  padding: 0.1rem 0.6rem;
+  padding: 0 0.4rem;
 }
 .select-wrap {
   border: none;
