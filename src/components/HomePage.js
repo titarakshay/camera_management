@@ -3,8 +3,9 @@ import Upload from "./Upload";
 import HeroSection from "./HeroSection";
 import Axios from "axios";
 import Snapshots from "./Snapshots";
+import Loader from "./Loader";
 
-export default function HomePage(props) {
+export default function HomePage() {
   let [snapShots, setSnapShots] = useState(null);
 
   useEffect(() => {
@@ -14,11 +15,17 @@ export default function HomePage(props) {
   }, []);
   return (
     <>
-      <HeroSection snapShots={snapShots} />
-      <Snapshots snapShots={snapShots} />
-      <div className="float-right my-3 pl-3">
-        <Upload />
-      </div>
+      {snapShots ? (
+        <>
+          <HeroSection snapShots={snapShots} />
+          <Snapshots snapShots={snapShots} />
+          <div className="float-right my-3 pl-3">
+            <Upload />
+          </div>
+        </>
+      ) : (
+        <Loader />
+      )}
     </>
   );
 }
