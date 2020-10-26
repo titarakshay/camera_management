@@ -8,8 +8,10 @@ export default function Tags(props) {
       <TiTags style={{ marginRight: "0.2rem", color: "#ccc" }} />
       <select className="select-wrap">
         <option>Tags</option>
-        {uniqueTags.map((tag) => (
-          <option value={tag}>{tag}</option>
+        {uniqueTags.map((tag, i) => (
+          <option key={i} value={tag}>
+            {tag}
+          </option>
         ))}
       </select>
     </p>
